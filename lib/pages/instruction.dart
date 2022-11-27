@@ -1,5 +1,5 @@
 import 'package:e_modul/themes.dart';
-import 'package:e_modul/widgets/background_footer.dart';
+import 'package:e_modul/widgets/page_title.dart';
 import 'package:flutter/material.dart';
 
 class Instruction extends StatelessWidget {
@@ -13,45 +13,12 @@ class Instruction extends StatelessWidget {
         backgroundColor: whiteColor,
         body: Stack(
           children: [
-            const BackgroundFooter(),
-            Positioned(
-              top: 0,
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                padding: const EdgeInsets.only(top: 50, bottom: 20, left: 20),
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    bottomRight: Radius.circular(30),
-                    bottomLeft: Radius.circular(30),
-                  ),
-                  color: primaryColor,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      onPressed: () => Navigator.pop(context),
-                      icon: Icon(Icons.arrow_back_ios, color: whiteColor),
-                    ),
-                    Text(
-                      'Petunjuk',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: bold,
-                        color: whiteColor,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(width: 50),
-                  ],
-                ),
-              ),
-            ),
+            const PageTitle(title: 'Petunjuk'),
             Positioned(
               top: 95,
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height - 150,
+                height: MediaQuery.of(context).size.height,
                 padding: const EdgeInsets.only(
                   right: 25,
                   left: 25,

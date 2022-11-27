@@ -1,4 +1,5 @@
 import 'package:e_modul/pages/instruction.dart';
+import 'package:e_modul/pages/ki_kd.dart';
 import 'package:e_modul/themes.dart';
 import 'package:e_modul/widgets/background_footer.dart';
 import 'package:e_modul/widgets/card_main_menu.dart';
@@ -79,7 +80,12 @@ class MainMenu extends StatelessWidget {
                     CardMainMenu(
                       text: 'KD & KI',
                       icon: Icons.file_present,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const KIKD(),
+                        ),
+                      ),
                     ),
                     CardMainMenu(
                       text: 'Kegiatan Belajar',
