@@ -9,3 +9,6 @@ FontWeight regular = FontWeight.w400;
 FontWeight medium = FontWeight.w500;
 FontWeight semibold = FontWeight.w600;
 FontWeight bold = FontWeight.w700;
+
+TextStyle styleTitle = TextStyle(fontSize: 20, fontWeight: bold);
+TextStyle styleBody = TextStyle(fontSize: 16, fontWeight: regular);

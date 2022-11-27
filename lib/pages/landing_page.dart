@@ -1,4 +1,6 @@
+import 'package:e_modul/pages/main_menu.dart';
 import 'package:e_modul/themes.dart';
+import 'package:e_modul/widgets/background_footer.dart';
 import 'package:e_modul/widgets/button_submit.dart';
 import 'package:flutter/material.dart';
 
@@ -48,13 +50,7 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 0,
-                child: Image.asset(
-                  'assets/images/background_footer.png',
-                  width: MediaQuery.of(context).size.width,
-                ),
-              ),
+              const BackgroundFooter(),
               Positioned(
                 top: 150,
                 child: SizedBox(
@@ -65,17 +61,25 @@ class LandingPage extends StatelessWidget {
                       Image.asset('assets/icons/ic_logo.png', width: 180),
                       const SizedBox(height: 50),
                       Text(
-                        'Selamat datang di\nE-Modul Simulai dan Komunikasi Digital',
+                        'Selamat datang di E-Modul\nKeragaman Ekonomi, Sosial, Budaya dan Agama',
                         style: TextStyle(fontSize: 20, fontWeight: bold),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 30),
                       const Text(
-                        'Kelas maya "EDMODO"',
+                        'Mata Pelajaran "IPS"',
                         style: TextStyle(fontSize: 22),
                       ),
                       const SizedBox(height: 50),
-                      ButtonSubmit(title: 'Mulai', onPressed: () {})
+                      ButtonSubmit(
+                        title: 'Mulai',
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MainMenu(),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
