@@ -1,3 +1,4 @@
+import 'package:e_modul/pages/about.dart';
 import 'package:e_modul/pages/instruction.dart';
 import 'package:e_modul/pages/ki_kd.dart';
 import 'package:e_modul/themes.dart';
@@ -95,7 +96,12 @@ class MainMenu extends StatelessWidget {
                     CardMainMenu(
                       text: 'Tentang',
                       icon: Icons.person,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const About(),
+                        ),
+                      ),
                     ),
                   ],
                 ),
