@@ -1,9 +1,10 @@
 import 'package:e_modul/pages/about.dart';
 import 'package:e_modul/pages/instruction.dart';
 import 'package:e_modul/pages/ki_kd.dart';
+import 'package:e_modul/pages/study_activities.dart';
 import 'package:e_modul/themes.dart';
 import 'package:e_modul/widgets/background_footer.dart';
-import 'package:e_modul/widgets/card_main_menu.dart';
+import 'package:e_modul/widgets/card_menu.dart';
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatelessWidget {
@@ -64,11 +65,11 @@ class MainMenu extends StatelessWidget {
             Positioned(
               top: 210,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: paddingContent,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
-                    CardMainMenu(
+                    CardMenu(
                       text: 'Petunjuk',
                       icon: Icons.rule,
                       onPressed: () => Navigator.push(
@@ -78,7 +79,7 @@ class MainMenu extends StatelessWidget {
                         ),
                       ),
                     ),
-                    CardMainMenu(
+                    CardMenu(
                       text: 'KD & KI',
                       icon: Icons.file_present,
                       onPressed: () => Navigator.push(
@@ -88,12 +89,17 @@ class MainMenu extends StatelessWidget {
                         ),
                       ),
                     ),
-                    CardMainMenu(
+                    CardMenu(
                       text: 'Kegiatan Belajar',
                       icon: Icons.book_online,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const StudyActivities(),
+                        ),
+                      ),
                     ),
-                    CardMainMenu(
+                    CardMenu(
                       text: 'Tentang',
                       icon: Icons.person,
                       onPressed: () => Navigator.push(

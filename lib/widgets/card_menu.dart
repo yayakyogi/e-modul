@@ -1,8 +1,8 @@
 import 'package:e_modul/themes.dart';
 import 'package:flutter/material.dart';
 
-class CardMainMenu extends StatelessWidget {
-  const CardMainMenu({
+class CardMenu extends StatelessWidget {
+  const CardMenu({
     Key? key,
     required this.text,
     required this.icon,
