@@ -1,3 +1,4 @@
+import 'package:e_modul/pages/games/game.dart';
 import 'package:e_modul/pages/materi/materi.dart';
 import 'package:e_modul/themes.dart';
 import 'package:e_modul/widgets/background_footer.dart';
@@ -38,7 +39,12 @@ class StudyActivities extends StatelessWidget {
                     CardMenu(
                       text: 'Game',
                       icon: Icons.gamepad,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Game(),
+                        ),
+                      ),
                     ),
                     CardMenu(
                       text: 'Soal',

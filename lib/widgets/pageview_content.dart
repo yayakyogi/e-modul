@@ -1,4 +1,3 @@
-import 'package:e_modul/themes.dart';
 import 'package:flutter/material.dart';
 
 class PageViewContent extends StatelessWidget {
@@ -7,11 +6,13 @@ class PageViewContent extends StatelessWidget {
     required this.pageController,
     required this.onPageChanged,
     required this.widgets,
+    this.isPageMateri = true,
   }) : super(key: key);
 
   final Function(int) onPageChanged;
   final PageController pageController;
   final List<Widget> widgets;
+  final bool isPageMateri;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,8 @@ class PageViewContent extends StatelessWidget {
           children: [
             Container(
               transform: Matrix4.translationValues(0.0, -20.0, 0.0),
-              height: MediaQuery.of(context).size.height * 1.25,
+              height: MediaQuery.of(context).size.height *
+                  (isPageMateri ? 1.25 : 1.1),
               width: MediaQuery.of(context).size.width,
               child: PageView(
                 physics: const NeverScrollableScrollPhysics(),
