@@ -1,4 +1,7 @@
+import 'package:e_modul/pages/materi/agama/agama.dart';
+import 'package:e_modul/pages/materi/etnis/etnis.dart';
 import 'package:e_modul/pages/materi/keragaman_ekonomi/keragaman_ekonomi.dart';
+import 'package:e_modul/pages/materi/sosial_budaya/sosial_budaya.dart';
 import 'package:e_modul/themes.dart';
 import 'package:e_modul/widgets/background_footer.dart';
 import 'package:e_modul/widgets/card_menu.dart';
@@ -43,17 +46,32 @@ class _MateriState extends State<Materi> {
                     CardMenu(
                       text: 'Sosial Budaya',
                       icon: Icons.looks_two,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SosialBudaya(),
+                        ),
+                      ),
                     ),
                     CardMenu(
                       text: 'Etnis',
                       icon: Icons.looks_3,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Etnis(),
+                        ),
+                      ),
                     ),
                     CardMenu(
                       text: 'Agama',
                       icon: Icons.looks_4,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Agama(),
+                        ),
+                      ),
                     ),
                   ],
                 ),

@@ -18,15 +18,16 @@ class PageViewContent extends StatelessWidget {
     return Positioned(
       top: 120,
       child: SizedBox(
-        height: MediaQuery.of(context).size.height - 50,
+        height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: ListView(
           children: [
             Container(
               transform: Matrix4.translationValues(0.0, -20.0, 0.0),
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height * 1.25,
               width: MediaQuery.of(context).size.width,
               child: PageView(
+                physics: const NeverScrollableScrollPhysics(),
                 onPageChanged: onPageChanged,
                 controller: pageController,
                 children: widgets,
