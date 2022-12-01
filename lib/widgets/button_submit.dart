@@ -6,22 +6,21 @@ class ButtonSubmit extends StatelessWidget {
     Key? key,
     required this.title,
     required this.onPressed,
+    this.isDisabled = false,
   }) : super(key: key);
 
   final Function() onPressed;
+  final bool isDisabled;
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,
+      onPressed: isDisabled ? null : onPressed,
       style: ElevatedButton.styleFrom(
+        fixedSize: Size(MediaQuery.of(context).size.width, 45),
         elevation: 0,
         primary: primaryColor,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 60,
-          vertical: 12,
-        ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),

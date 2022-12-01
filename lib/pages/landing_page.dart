@@ -71,12 +71,15 @@ class LandingPage extends StatelessWidget {
                         style: TextStyle(fontSize: 22),
                       ),
                       const SizedBox(height: 50),
-                      ButtonSubmit(
-                        title: 'Mulai',
-                        onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const MainMenu(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: ButtonSubmit(
+                          title: 'Mulai',
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MainMenu(),
+                            ),
                           ),
                         ),
                       ),

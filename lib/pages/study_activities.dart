@@ -1,5 +1,6 @@
 import 'package:e_modul/pages/games/game.dart';
 import 'package:e_modul/pages/materi/materi.dart';
+import 'package:e_modul/pages/soal/soal.dart';
 import 'package:e_modul/themes.dart';
 import 'package:e_modul/widgets/background_footer.dart';
 import 'package:e_modul/widgets/card_menu.dart';
@@ -49,7 +50,12 @@ class StudyActivities extends StatelessWidget {
                     CardMenu(
                       text: 'Soal',
                       icon: Icons.task,
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Soal(),
+                        ),
+                      ),
                     ),
                   ],
                 ),

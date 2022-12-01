@@ -1,4 +1,5 @@
 import 'package:e_modul/pages/landing_page.dart';
+import 'package:e_modul/pages/splashscreen,.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'E-Modul',
       theme: ThemeData(fontFamily: 'Quicksand'),
-      home: const LandingPage(),
+      home: const Splashscreen(),
     );
   }
 }
